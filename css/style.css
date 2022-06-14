@@ -9,6 +9,7 @@
   --footer-bg-color: #2f303a;
   --button-bg-color: #f5f4fa;
   --icon-color: #afb1b8;
+  --modal-bg: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -757,6 +758,11 @@ img {
   background: rgba(0, 0, 0, 0.2);
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal {
   position: absolute;
   width: 528px;
@@ -785,6 +791,6 @@ img {
 
   background: #ffffff;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--modal-bg);
   cursor: pointer;
 }
