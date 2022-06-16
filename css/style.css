@@ -543,7 +543,7 @@ img {
   border-radius: 4px;
   color: var(--icon-color);
 
-  transition: color 250ms var(--animation-timing), border 250ms var(--animation-timing);
+  transition: color 250ms var(--animation-timing);
 }
 
 .client-icon {
