@@ -531,8 +531,6 @@ img {
 
 .clients-item:not(:last-child) {
   margin-right: 30px;
-
-  transition: border 250ms var(--animation-timing);
 }
 
 .clients-link {
@@ -545,21 +543,17 @@ img {
   border-radius: 4px;
   color: var(--icon-color);
 
-  transition: color 250ms var(--animation-timing);
+  transition: color 250ms var(--animation-timing), border 250ms var(--animation-timing);
 }
 
 .client-icon {
   fill: currentColor;
 }
 
-.clients-item:hover,
-.clients-item:focus {
-  border: 1px solid var(--accent-color);
-}
-
 .clients-link:hover,
 .clients-link:focus {
   color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* -----------------------------------------------PORTFOLIO-------------------------------------------------- */
