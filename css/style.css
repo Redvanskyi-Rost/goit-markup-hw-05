@@ -10,6 +10,7 @@
   --button-bg-color: #f5f4fa;
   --icon-color: #afb1b8;
   --modal-bg: rgba(0, 0, 0, 0.2);
+  --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -94,10 +95,6 @@ img {
 
 .header .logo-accent {
   color: var(--primary-text-color);
-}
-
-.footer-logo {
-  color: var(--accent-color);
 }
 
 .footer .logo-accent {
@@ -586,7 +583,7 @@ img {
 }
 
 .portfolio-items:hover .portfolio-thumbs-text {
-  opacity: 1;
+  transform: translate(0%);
 }
 
 .content {
@@ -613,6 +610,7 @@ img {
 
 .portfolio-thumbs {
   position: relative;
+  overflow: hidden;
 }
 
 .portfolio-thumbs-text {
@@ -624,7 +622,8 @@ img {
   height: 100%;
   background: var(--bg-animation);
 
-  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms var(--animation-timing);
 }
 
 .portfolio-depiction {
